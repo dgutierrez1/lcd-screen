@@ -14,6 +14,7 @@ Salida: Imprimir los números especificados usando el caracter “-“ para los 
 Entre cada impresión debe haber una línea blanca.
 
 
+Este proyecto usa camelCase para nombre de las variables y funciones como especifica <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines">la guia de estilo de Microsoft sobre Typescript</a>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
