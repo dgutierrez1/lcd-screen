@@ -3,6 +3,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
+
+
 Este proyecto busca satisfacer los requerimientos provistos acontinuacion:
 
 Objetivo: Crear un programa que imprime números en estilo de una pantalla LCD
@@ -12,6 +14,8 @@ Entrada: La entrada contiene varias líneas. Cada línea contiene 2 números sep
 Salida: Imprimir los números especificados usando el caracter “-“ para los caracteres horizontales, y “|” para los verticales. Cada dígito debe ocupar exactamente size+2 columnas y 2*size + 3 filas.
 
 Entre cada impresión debe haber una línea blanca.
+
+Ver <a href="https://lcd-screen.firebaseapp.com/">demo hosteado en Firebase</a>
 
 
 Este proyecto usa camelCase para nombre de las variables y funciones como especifica <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines">la guia de estilo de Microsoft sobre Typescript</a>
