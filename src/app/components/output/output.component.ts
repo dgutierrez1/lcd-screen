@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CentralControllerService } from '../../services/central-controller/central-controller.service';
+import { OrchestratorService } from '../../services/orchestrator/orchestrator.service';
 
 @Component({
   selector: 'app-output',
@@ -8,9 +8,22 @@ import { CentralControllerService } from '../../services/central-controller/cent
 })
 export class OutputComponent implements OnInit {
 
-  constructor() { }
+  outputHistory: string[];
+
+  constructor(private orchestrator: OrchestratorService) {
+    this.outputHistory = [];
+   }
 
   ngOnInit() {
+    this.orchestrator.getOutputSubject().subscribe((lastOutput => {
+
+      // const outputSplit = lastOutput.split('\n');
+      // outputSplit.forEach((line) => {
+      //   this.outputHistory.push(line)
+      // })
+      this.outputHistory.push(lastOutput);
+      //console.log(lastOutput)
+    }))
   }
 
 }

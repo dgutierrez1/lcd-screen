@@ -1,8 +1,10 @@
+import { NumberMatrixCacheManager } from './services/digit-builder/matrix-cache-manager';
+import { DigitBuilder } from './services/digit-builder/digit-builder';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 
-import { AlertModule } from 'ngx-bootstrap';
+import { AlertModule, AccordionModule, ButtonsModule  } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { OutputComponent } from './components/output/output.component';
@@ -10,9 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { InputVerifierService } from './services/input-verifier/input-verifier.service';
-import { CentralControllerService } from './services/central-controller/central-controller.service';
-import { DigitBuilderService } from './services/digit-builder/digit-builder.service';
-import { PrintService } from './services/print/print.service';
+import { OrchestratorService } from './services/orchestrator/orchestrator.service';
+import { DigitManagerService } from './services/digit-builder/digit-manager.service';
+import { OutputHandlerService } from './services/output-handler/output-handler.service';
 
 
 @NgModule({
@@ -26,14 +28,20 @@ import { PrintService } from './services/print/print.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    AccordionModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [
     InputVerifierService,
-    CentralControllerService,
-    DigitBuilderService,
-    PrintService
+    OrchestratorService,
+    DigitManagerService,
+    OutputHandlerService,
+    DigitBuilder,
+    NumberMatrixCacheManager,
+    OutputHandlerService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
