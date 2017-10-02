@@ -19,6 +19,11 @@ Ver <a href="https://lcd-screen.firebaseapp.com/">demo hosteado en Firebase</a>
 
 
 Este proyecto usa camelCase para nombre de las variables y funciones como especifica <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines">la guia de estilo de Microsoft sobre Typescript</a>
+
+## Para que la aplicacion funcione localmente
+
+Clonar el repositorio y ejecutar `npm install` en la carpeta. Para desarrollo o produccion seguir la especificacion siguiente
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
