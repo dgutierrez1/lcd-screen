@@ -1,3 +1,18 @@
-<p>
-  header works!
-</p>
+<div class="header container">
+  <h1>Solucion <i>por Daniel Gutierrez</i> para los requerimientos encontrados en <a href="https://github.com/pslcorp/lcdrefactor"> este repositorio </a> </h1>
+</div>
+
+<div class="container">
+  <h4>Descripcion</h4>
+  
+  <p>A forma de resumen, la aplicacion funciona a partir de una lista de digitos base (de 0 a 9) con esta lista se haran todas las conversiones que se requiera. Habran multiples listas de digitos base, cada una con una longitud de segmento diferente. 
+    Las opciones de cache permiten almacenar listas de diferente longitud de segmento para disminuir el tiempo de respuesta,
+   pues no se tendrian que crear nuevamente con cada peticion.  </p>
+  <h4>Sobre las funcionalidades</h4>
+  <ul>
+    <li><b>Impresion por consola: </b>Esta opcion activa la impresion por consola (F12 en chrome para abrir la consola)</li>
+    <li><b>Impresion en pantalla: </b>Esta opcion activa la impresion en la pantalla (esta funcionalidad presenta problemas de visualizacion, si no se ven los numeros claramente, puede verlos por consola) </li>
+    <li><b>Creacion de matrices en segundo plano: </b>Buscando mejorar el tiempo de respuesta, esta opcion activa la creacion de matrices de manera asincrona en segundo plano, estas matrices se guardaran en memoria y estaran disponibles para las siguientes conversiones.(Por defecto se estan creando matrices con longitud de segmento de 1 a 100)</li>
+    <li><b>Almacenamiento de matrices: </b>Esta opcion permite guardar nuevas matrices creadas en memoria, en caso de que se necesiten nuevamente</li>
+  </ul>
+</div>

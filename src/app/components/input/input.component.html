@@ -1,21 +1,24 @@
-<accordion>
-    <accordion-group heading="Datos de entrada">
-      <alert type="danger" *ngIf="verifyAlert!==''">
-        {{verifyAlert}}
-      </alert>
-      <h5>Entrada</h5>
-      <input  [(ngModel)]="inputNumber" type="text">
-      <label class="btn btn-primary" (click)="convertNumberToLCD()" >Convertir a LCD</label>
-    </accordion-group>
-    <accordion-group heading="Opciones">
-      <h5></h5>  
-      <label class="btn btn-primary" [(ngModel)]="options.consoleLogging"  (ngModelChange)="updateConsoleLogging()"
-        btnCheckbox>{{options.consoleLogging ? 'Desahabilitar' : 'Habilitar'}} impresion por consola</label>
-        <label class="btn btn-primary" [(ngModel)]="options.DOMLogging"  (ngModelChange)="updateDOMLogging()"
-        btnCheckbox>{{options.DOMLogging ? 'Desahabilitar' : 'Habilitar'}} impresion en pantalla</label>
-        <label class="btn btn-primary" [(ngModel)]="options.asyncCache"  (ngModelChange)="updateAsyncCache()"
-        btnCheckbox>{{options.asyncCache ? 'Desahabilitar' : 'Habilitar'}} creacion de matrices en segundo plano</label>
-        <label class="btn btn-primary" [(ngModel)]="options.cacheStorage"  (ngModelChange)="updateCacheStorage()"
-        btnCheckbox>{{options.cacheStorage ? 'Desahabilitar' : 'Habilitar'}} almacenamiento de matrices previamente creadas</label>
-    </accordion-group>
-</accordion>
+<div class="container card">
+
+  <accordion>
+      <accordion-group heading="Datos de entrada">
+        <alert type="danger" *ngIf="verifyAlert!==''">
+          {{verifyAlert}}
+        </alert>
+        <h5>Entrada</h5>
+        <input  [(ngModel)]="inputNumber" type="text">
+        <label class="btn btn-primary" (click)="convertNumberToLCD()" >Convertir a LCD</label>
+      </accordion-group>
+      <accordion-group heading="Opciones">
+        <h5></h5>  
+        <label class="btn btn-primary" [(ngModel)]="options.consoleLogging"  (ngModelChange)="updateConsoleLogging()"
+          btnCheckbox>{{options.consoleLogging ? 'Desahabilitar' : 'Habilitar'}} impresion por consola</label>
+          <label class="btn btn-primary" [(ngModel)]="options.DOMLogging"  (ngModelChange)="updateDOMLogging()"
+          btnCheckbox>{{options.DOMLogging ? 'Desahabilitar' : 'Habilitar'}} impresion en pantalla</label>
+          <label class="btn btn-primary" [(ngModel)]="options.asyncCache"  (ngModelChange)="updateAsyncCache()"
+          btnCheckbox>{{options.asyncCache ? 'Desahabilitar' : 'Habilitar'}} creacion de matrices en segundo plano</label>
+          <label class="btn btn-primary" [(ngModel)]="options.cacheStorage"  (ngModelChange)="updateCacheStorage()"
+          btnCheckbox>{{options.cacheStorage ? 'Desahabilitar' : 'Habilitar'}} almacenamiento de matrices previamente creadas</label>
+      </accordion-group>
+  </accordion>
+</div>
